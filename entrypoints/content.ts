@@ -206,6 +206,7 @@ async function XClientOperations(tweetId: string, action: "hide" | "mute" | "blo
   }
 
 }
+
 function selectMenuItem(menuItems: NodeListOf<HTMLElement>, itemText: string)
 {
   for(const item of menuItems)
@@ -226,6 +227,7 @@ function clickOnXItem(XItem: HTMLElement | null): void {
   }
   XItem.click();
 }
+
 /* Deals with waiting for the menu to open before proceeding with clicking on menu items */
 async function handleMenu(desiredItemQuery: string, usingItems: boolean): Promise<NodeListOf<HTMLElement> | undefined> {
   // Wait for the menu to appear before proceeding
@@ -248,6 +250,7 @@ async function handleMenu(desiredItemQuery: string, usingItems: boolean): Promis
       return items;
   }
 }
+
 /* Sets up the mutation observer which is used for detecting DOM changes */
 function waitForDOMChange(query: string): Promise<string> {
   return new Promise((resolve, reject) => {
