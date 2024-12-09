@@ -179,6 +179,7 @@ function CreateFilterView({ onBack, filterToEdit }) {
   );
 }
 
+
 function App() {
   const [currentView, setCurrentView] = useState("home");
   const [filterToEdit, setFilterToEdit] = useState(null);
